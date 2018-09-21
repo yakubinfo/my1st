@@ -1,0 +1,8 @@
+s = input("Enter the string - ")
+#s= "((a+b))"
+b1 = s[-2:]
+b2 = s[:2]
+if b1 == "))" and b2 == "((":
+    print("String contains redundent Brases",1)
+else:
+    print("String does't contains redundent Brases",0)
