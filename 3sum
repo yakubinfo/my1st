@@ -1,0 +1,23 @@
+import itertools
+
+def f_ClosestVal(v_List, v_Number):
+    """Takes an unsorted LIST of INTs and RETURNS INDEX of value closest to an INT"""
+    for _index, i in enumerate(v_List):
+        v_List[_index] = abs(v_Number - i)
+        return v_List.index(min(v_List))
+
+s = input("Enter the string - ")
+
+TN = 1
+r = itertools.combinations(s,3)
+t =[]
+
+for i in r :
+    print(sum ( i))   
+    t.append(sum ( i))
+    
+print(t)
+#logic 1 
+print(min(t, key=lambda x:abs(x-TN)))
+#logic 2
+print(f_ClosestVal( t , TN))
